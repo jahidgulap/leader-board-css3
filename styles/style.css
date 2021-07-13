@@ -77,5 +77,71 @@ hr{
     text-decoration: none;
     color: #562EFF;
     font-size: 16px;
+ }
+ /*----------------
+ courses styles 
+ ---------------*/
+ .courses{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     grid-column-gap: 24px;
+ }
+ .course .course-banner img{
+     width: 224px;
+     height: 104px;
+ }
+ .course-info{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+ }
+ .fa-star{
+     font-size: 12px;
+ }
+  .fa-star.filled{         /*gap dea hoyni coz aita same element ei hbe. gap deyar mane hlo child? */
+    color: #FFC014;
 
  }
+  .fa-star.empty{        
+    color: #AEAEAE;
+}
+.course-duration{
+    background: #FFE4E8;
+    border-radius: 14.6913px;
+    color:#FF4A60;
+    Width: 94.83px;
+    Height: 29.38px;
+    text-align: center;
+}
+/* ------------
+Media Queries
+-------------- */
+
+/* Mobile Devices */
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+       
+        grid-template-columns: repeat(1,1fr);
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+}
+
+/* tablet devices */
+
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .conatiner{
+        width: 100%;
+    }
+    .players, .courses{
+       grid-template-columns: repeat(2,1fr);
+    }
+    .blogs{
+       grid-template-columns: repeat(1,1fr);
+    }
+}
+
